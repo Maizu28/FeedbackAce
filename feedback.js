@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // === URL Konfigurasi ===
     const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1382054980185358406/O_jbKhqoJtoykrcqzTGE05HhmHvGCUtHY7d2ZWqZTDekTWQNxnBs-UXccMdMd8ouS0M0";
-    const APPS_SCRIPT_FEEDBACK_URL = "https://script.google.com/macros/s/AKfycbzG5V-88uMIvveOT39f171bV9V_5xXWZKx7w7dOHfEhPxKo9qshDvJdVXM5zFYJpQ7iNg/exec";
+    const APPS_SCRIPT_FEEDBACK_URL = "https://script.google.com/macros/s/AKfycbwlLwFwEWsxWg0BndZFNnCPp3T1SQmhlvfKBSSu4-eFr9WszjT17XSSjr9Qu_XxqLYS9g/exec";
 
     function updateStarVisuals(currentRatingValue) {
         stars.forEach(s => {
@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         const payloadDiscord = {
             username: "AceFeedback",
-            avatar_url: "https://i.imgur.com/R66g1Pe.png",
+            avatar_url: "https://github.com/Maizu28/FeedbackAce/blob/main/9e9721eec382387254f2567d52cb01df.jpg?raw=true",
             embeds: [{
                 title: "📝 Feedback Baru Diterima!",
                 color: getColorForFeedbackType(feedbackType),
