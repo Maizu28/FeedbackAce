@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // === URL Konfigurasi ===
-    const DISCORD_WEBHOOK_URL = "MASUKAN_URL_WEBHOOK_DISCORD";
+    const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1382054980185358406/O_jbKhqoJtoykrcqzTGE05HhmHvGCUtHY7d2ZWqZTDekTWQNxnBs-UXccMdMd8ouS0M0";
     const APPS_SCRIPT_FEEDBACK_URL = "https://script.google.com/macros/s/AKfycbzG5V-88uMIvveOT39f171bV9V_5xXWZKx7w7dOHfEhPxKo9qshDvJdVXM5zFYJpQ7iNg/exec";
 
     function updateStarVisuals(currentRatingValue) {
@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
             ratingStarsText = '⭐'.repeat(rating) + '☆'.repeat(5 - rating) + ` (${rating}/5)`;
         }
         const payloadDiscord = {
-            username: "Hanetstore Feedback",
+            username: "AceFeedback",
             avatar_url: "https://i.imgur.com/R66g1Pe.png",
             embeds: [{
                 title: "📝 Feedback Baru Diterima!",
