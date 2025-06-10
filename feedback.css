@@ -1,0 +1,271 @@
+/* feedback.css - Fokus pada Styling Formulir Feedback */
+
+/* Impor Font dari Google Fonts (jika belum ada di CSS utama Anda) */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+    /* Warna yang digunakan spesifik untuk halaman feedback */
+    /* Anda bisa menyesuaikan ini agar serasi dengan warna brand dari CSS utama jika perlu */
+    --feedback-accent-color: #007bff; /* Biru yang mungkin sama dengan CSS utama */
+    --feedback-accent-darker: #0056b3;
+    --feedback-text-heading: #34495e; /* Untuk judul formulir */
+    --feedback-text-body: #5a6b7b;    /* Untuk teks biasa & label */
+    --feedback-text-input: #333d48;   /* Warna teks di dalam input */
+    --feedback-bg-page: #f8f9fa;      /* Background halaman (jika berbeda dari CSS utama) */
+    --feedback-bg-container: #ffffff; /* Background kontainer formulir */
+    --feedback-border-input: #ced4da;
+    --feedback-star-color: #f39c12;   /* Oranye untuk bintang */
+    --feedback-success-color: #27ae60;
+    --feedback-error-color: #e74c3c;
+    --feedback-input-focus-shadow: rgba(0, 123, 255, 0.25);
+    --feedback-button-shadow: rgba(0, 91, 179, 0.2);
+
+    --font-heading-feedback: 'Montserrat', sans-serif; /* Font untuk judul formulir */
+    --font-body-feedback: 'Roboto', sans-serif;       /* Font untuk teks formulir */
+}
+
+body {
+    font-family: var(--font-body-feedback); /* Menggunakan font dari variabel feedback */
+    background-color: var(--feedback-bg-page); /* Background halaman */
+    margin: 0;
+    padding: 0; /* Diasumsikan CSS utama tidak mengatur padding body global */
+    color: var(--feedback-text-body);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+}
+
+/* Navigation */
+nav {
+    background-color: #444;
+    padding: 10px;
+    text-align: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Kontainer untuk Formulir Feedback */
+/* Pastikan div pembungkus form di HTML Anda memiliki kelas "container feedback-form-container" */
+.container.feedback-form-container {
+    background-color: var(--feedback-bg-container);
+    padding: 40px 45px;
+    border-radius: 15px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.09);
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto; /* Jarak dari navigasi (CSS utama) dan agar terpusat */
+    border-top: 5px solid var(--feedback-accent-color); /* Aksen border atas */
+}
+
+.container.feedback-form-container h1 { /* Judul di dalam kontainer form */
+    font-family: var(--font-heading-feedback);
+    color: var(--feedback-text-heading);
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 1.9em;
+    font-weight: 700;
+}
+
+.container.feedback-form-container p.subtitle { /* Subjudul di dalam kontainer form */
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--feedback-text-body);
+    font-size: 1.0em;
+}
+
+/* Gaya Formulir */
+.form-group {
+    margin-bottom: 28px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: var(--feedback-text-body);
+    font-size: 0.9em;
+    letter-spacing: 0.3px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid var(--feedback-border-input);
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 0.95em;
+    font-family: var(--font-body-feedback);
+    color: var(--feedback-text-input);
+    background-color: #fcfdff; /* Background input sedikit berbeda */
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--feedback-accent-color);
+    outline: none;
+    box-shadow: 0 0 0 0.25rem var(--feedback-input-focus-shadow);
+    background-color: var(--feedback-bg-container);
+}
+
+.form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%235A6B7B%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 10px auto;
+    padding-right: 50px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.required {
+    color: var(--feedback-error-color);
+    margin-left: 4px;
+    font-weight: normal;
+}
+
+.rating-stars {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 8px;
+}
+
+.rating-stars .star {
+    font-size: 32px;
+    color: #ced4da;
+    cursor: pointer;
+    transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.rating-stars .star:hover,
+.rating-stars .star.selected {
+    color: var(--feedback-star-color);
+}
+.rating-stars .star:hover {
+    transform: scale(1.2) rotate(5deg);
+}
+
+button[type="submit"] {
+    background: linear-gradient(95deg, var(--feedback-accent-color) 0%, var(--feedback-accent-darker) 100%);
+    color: #e6ffed; /* Menggunakan variabel dari feedback */
+    padding: 16px 28px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 700;
+    font-family: var(--font-heading-feedback);
+    letter-spacing: 0.5px;
+    transition: opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    display: block;
+    width: 100%;
+    box-shadow: 0 5px 18px var(--feedback-button-shadow);
+    margin-top: 15px;
+}
+
+button[type="submit"]:hover {
+    opacity: 0.85;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px var(--feedback-button-shadow);
+}
+
+button[type="submit"]:disabled {
+    background: #ced4da;
+    color: #ffffff;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+#statusMessage {
+    margin-top: 30px;
+    padding: 16px 22px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1em;
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#statusMessage.success {
+    background-color: #e6ffed;
+    color: var(--feedback-success-color);
+    border: 1px solid #a3e9a4;
+}
+
+#statusMessage.error {
+    background-color: #ffe8e6;
+    color: var(--feedback-error-color);
+    border: 1px solid #ffc9c9;
+}
+
+/* Penyesuaian untuk layar kecil */
+@media (max-width: 768px) {
+    .container.feedback-form-container {
+        padding: 30px 25px; margin: 30px auto; width: 80%; /* Disesuaikan agar tidak terlalu mepet header/nav */
+        border-top-width: 4px;
+    }
+    .container.feedback-form-container h1 { font-size: 1.7em; }
+    .container.feedback-form-container p.subtitle { font-size: 0.9em; margin-bottom: 30px;}
+
+    .form-group input[type="text"],
+    .form-group input[type="email"],
+    .form-group select,
+    .form-group textarea { padding: 14px 18px; font-size: 0.9em; }
+    .form-group select { background-position: right 15px center; padding-right: 40px; }
+
+    button[type="submit"] { padding: 15px 22px; font-size: 1em; }
+    .rating-stars .star { font-size: 28px; }
+    #statusMessage { padding: 14px 18px; font-size: 0.9em;}
+}
+
+@media (max-width: 480px) {
+    .container.feedback-form-container { padding: 25px 20px; margin: 20px auto; } /* Margin lebih kecil */
+    .container.feedback-form-container h1 { font-size: 1.5em; }
+    .container.feedback-form-container p.subtitle { font-size: 0.85em; }
+    .rating-stars .star { font-size: 26px; }
+    button[type="submit"] { padding: 14px 20px; }
+}
